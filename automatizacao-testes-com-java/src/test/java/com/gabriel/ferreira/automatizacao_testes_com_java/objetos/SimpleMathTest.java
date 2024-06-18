@@ -56,6 +56,14 @@ class SimpleMathTest {
     }
 
     @Test
-    void mean() {
+    void testMean_comValoresValiods_RetornadoMean() {
+        SimpleMath math = new SimpleMath();
+        Double firstNumber = 6D;
+        Double secondNumber = 2D;
+        Double result = math.mean(firstNumber, secondNumber);
+        Double espera = 4D;
+        assertEquals(result, espera, () ->
+                "testSum_comValoresValidos_RetornadoSum(), não fundionou da forma esperada. " + "(" + firstNumber + "+"
+                        + secondNumber + ")" + "/2"+ " espera: "+ espera);
     }
 }
