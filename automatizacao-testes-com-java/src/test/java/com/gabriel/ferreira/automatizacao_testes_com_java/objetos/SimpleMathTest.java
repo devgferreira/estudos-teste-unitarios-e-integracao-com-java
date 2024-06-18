@@ -20,7 +20,15 @@ class SimpleMathTest {
     }
 
     @Test
-    void sub() {
+    void testSub_comValoresValiods_RetornadoSub() {
+        SimpleMath math = new SimpleMath();
+        Double firstNumber = 6.2D;
+        Double secondNumber = 2D;
+        Double result = math.sub(firstNumber, secondNumber);
+        Double espera = 4.2D;
+        assertEquals(result, espera, () ->
+                "testSum_comValoresValidos_RetornadoSum(), não fundionou da forma esperada. " + firstNumber + "+"
+                        + secondNumber + " espera: "+ espera);
     }
 
     @Test
