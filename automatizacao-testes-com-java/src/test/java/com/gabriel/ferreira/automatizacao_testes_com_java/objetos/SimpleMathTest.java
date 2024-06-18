@@ -44,7 +44,15 @@ class SimpleMathTest {
     }
 
     @Test
-    void div() {
+    void testDiv_comValoresValiods_RetornadoDiv() {
+        SimpleMath math = new SimpleMath();
+        Double firstNumber = 6D;
+        Double secondNumber = 2D;
+        Double result = math.div(firstNumber, secondNumber);
+        Double espera = 3D;
+        assertEquals(result, espera, () ->
+                "testSum_comValoresValidos_RetornadoSum(), não fundionou da forma esperada. " + firstNumber + "/"
+                        + secondNumber + " espera: "+ espera);
     }
 
     @Test
