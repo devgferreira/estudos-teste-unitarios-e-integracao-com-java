@@ -1,4 +1,4 @@
-package com.gabriel.ferreira.automatizacao_testes_com_java.domain.model;
+package com.gabriel.ferreira.automatizacao_testes_com_java.objetos;
 
 public class SimpleMath {
     public Double sum(Double fisrtNumber, Double secondNumber){
