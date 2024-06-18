@@ -27,12 +27,20 @@ class SimpleMathTest {
         Double result = math.sub(firstNumber, secondNumber);
         Double espera = 4.2D;
         assertEquals(result, espera, () ->
-                "testSum_comValoresValidos_RetornadoSum(), não fundionou da forma esperada. " + firstNumber + "+"
+                "testSum_comValoresValidos_RetornadoSum(), não fundionou da forma esperada. " + firstNumber + "-"
                         + secondNumber + " espera: "+ espera);
     }
 
     @Test
-    void mult() {
+    void testMult_comValoresValiods_RetornadoMult() {
+        SimpleMath math = new SimpleMath();
+        Double firstNumber = 6D;
+        Double secondNumber = 2D;
+        Double result = math.mult(firstNumber, secondNumber);
+        Double espera = 12D;
+        assertEquals(result, espera, () ->
+                "testSum_comValoresValidos_RetornadoSum(), não fundionou da forma esperada. " + firstNumber + "*"
+                        + secondNumber + " espera: "+ espera);
     }
 
     @Test
