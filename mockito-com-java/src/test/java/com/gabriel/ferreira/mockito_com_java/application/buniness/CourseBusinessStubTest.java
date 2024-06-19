@@ -4,12 +4,11 @@ import com.gabriel.ferreira.mockito_com_java.application.interfaces.ICourseServi
 import com.gabriel.ferreira.mockito_com_java.application.services.CourseService;
 import org.junit.jupiter.api.Test;
 
-import java.awt.*;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CourseBusinessTest {
+class CourseBusinessStubTest {
     @Test
     void testbuscarCursosPorEstudante_UsandoStub(){
         //Given / Arrange
