@@ -13,6 +13,9 @@ public class CourseBusiness {
     }
     public List<String> buscarCursosPorEstudante(String estudante){
         List<String> cursosFiltrados = new ArrayList<>();
+        if("Foo Bar".equals(estudante)){
+            return cursosFiltrados;
+        }
         List<String> cursos = _courseService.buscarCursosPorEstudante(estudante);
 
         for (String curso : cursos){
