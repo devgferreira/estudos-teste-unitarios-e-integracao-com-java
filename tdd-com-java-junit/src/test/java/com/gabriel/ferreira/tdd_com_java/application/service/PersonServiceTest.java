@@ -2,6 +2,7 @@ package com.gabriel.ferreira.tdd_com_java.application.service;
 
 import com.gabriel.ferreira.tdd_com_java.application.interfaces.IPersonService;
 import com.gabriel.ferreira.tdd_com_java.domain.model.Person;
+import static com.gabriel.ferreira.tdd_com_java.common.PersonContants.PERSON_VALIDA;
 import lombok.Data;
 import org.junit.jupiter.api.Test;
 
@@ -11,37 +12,24 @@ class PersonServiceTest {
     void testCriarPerson_ComPersonValida_RetornandoPerson(){
         //Given / Arrange
         IPersonService _personService = new PersonService();
-        Person person = new Person(
-                "Gabriel",
-                "Moon",
-                "gabi@gmail.com",
-                "Rua - SP",
-                "M"
-        );
 
         // When / Act
-       Person result = _personService.criarPerson(person);
+       Person result = _personService.criarPerson(PERSON_VALIDA);
 
         //Then / Assert
-        assertEquals(result, person, () -> "O criarPerson(), não retornou uma Person.");
+        assertEquals(result, PERSON_VALIDA, () -> "O criarPerson(), não retornou uma Person.");
     }
     @Test
     void testCriarPerson_ComSucessoSeConterPimerioNome_RetornandoPerson(){
         //Given / Arrange
         IPersonService _personService = new PersonService();
-        Person person = new Person(
-                "Gabriel",
-                "Moon",
-                "gabi@gmail.com",
-                "Rua - SP",
-                "M"
-        );
+
 
         // When / Act
-        Person result = _personService.criarPerson(person);
+        Person result = _personService.criarPerson(PERSON_VALIDA);
 
         //Then / Assert
-        assertEquals(result.getPrimeiroNome(), person.getPrimeiroNome(), () -> "O primerio nome é diferente.");
+        assertEquals(result.getPrimeiroNome(), PERSON_VALIDA.getPrimeiroNome(), () -> "O primerio nome é diferente.");
     }
 
 }
