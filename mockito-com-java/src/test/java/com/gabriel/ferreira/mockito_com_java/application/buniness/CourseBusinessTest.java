@@ -22,6 +22,18 @@ class CourseBusinessTest {
         // Then / Assert
         assertEquals(4, cursosFiltrados.size());
     }
+    @Test
+    void testbuscarCursosPorEstudante_UsandoFooBarEstudante(){
+        //Given / Arrange
+        ICourseService _courseService = new CourseService();
+        CourseBusiness _courseBusiness = new CourseBusiness(_courseService);
+
+        //When / Act
+        List<String> cursosFiltrados = _courseBusiness.buscarCursosPorEstudante("Foo Bar");
+
+        // Then / Assert
+        assertEquals(0, cursosFiltrados.size());
+    }
 
 
 }
