@@ -1,8 +1,10 @@
 package com.gabriel.ferreira.tdd_com_java.domain.model;
 
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.Objects;
-
+@Data
 public class Person implements Serializable {
     private Long id;
    private String primeiroNome;
